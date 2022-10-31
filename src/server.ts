@@ -1,5 +1,6 @@
 import App from "./app";
+import { PORT } from "@configs/server.json";
 
-const port = process.env.PORT || 3000;
+const port = PORT || 3000;
 
 App.start(port);
