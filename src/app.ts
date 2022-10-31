@@ -7,7 +7,7 @@ class App {
     this.express = express();
   }
 
-  public middlewares(): void {
+  private middlewares(): void {
     this.express.use(express.json());
   }
 
@@ -15,7 +15,7 @@ class App {
   //   this.express.use(require("./routes"));
   // }
 
-  public listen(port: number | string): void {
+  private listen(port: number | string): void {
     this.express.listen(port || 3000);
     console.log(`Server started on port ${port || 3000}`);
   }
