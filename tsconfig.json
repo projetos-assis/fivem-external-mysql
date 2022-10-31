@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
     "target": "es2016",
+    "baseUrl": "src",
     "module": "commonjs",
     "rootDir": "./src",
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@configs/*": ["configs/*"],
+    }
   }
 }
