@@ -1,4 +1,6 @@
+import { password, user } from "@configs/auth.json";
 import express from "express";
+import basicAuth from "express-basic-auth";
 
 class App {
   public express: express.Application;
@@ -9,6 +11,11 @@ class App {
 
   private middlewares(): void {
     this.express.use(express.json());
+    this.express.use(
+      basicAuth({
+        users: { [user]: password },
+      })
+    );
   }
 
   // public routes(): void {
