@@ -28,6 +28,7 @@ class App {
   }
 
   public start(port: number | string): void {
+    require("@infra/database");
     this.middlewares();
     // this.routes();
     this.listen(port || 3000);
