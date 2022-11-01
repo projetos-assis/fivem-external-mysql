@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "paths": {
       "@configs/*": ["configs/*"],
+      "@infra/*": ["infra/*"]
     }
   }
 }
